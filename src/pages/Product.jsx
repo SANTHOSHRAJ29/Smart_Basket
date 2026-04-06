@@ -20,7 +20,7 @@ const Product = () => {
   useEffect(() => {
     const getProduct = async () => {
       setLoading(true);
-      const response = await fetch(`https://fakestoreapi.com/products/₹{id}`);
+      const response = await fetch(`https://fakestoreapi.com/products/${id}`);
       const data = await response.json();
       setProduct(data);
       setLoading(false);
@@ -72,7 +72,7 @@ const Product = () => {
                 {product.rating && product.rating.rate}{" "}
                 <i className="fa fa-star"></i>
               </p>
-              <h3 className="display-6 my-4">₹{(product.price * 75).toFixed(0)}</h3>
+              <h3 className="display-6 my-4">${(product.price * 75).toFixed(0)}</h3>
               <p className="lead">{product.description}</p>
               <button
                 className="btn btn-outline-dark"

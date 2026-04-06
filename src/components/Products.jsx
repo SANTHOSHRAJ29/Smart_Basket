@@ -63,10 +63,10 @@ const Products = () => {
                 </h6>
 
                 <p className="card-text fw-bold">
-                  ₹{(item.price * 75).toFixed(0)}
+                  ${(item.price * 75).toFixed(0)}
                 </p>
 
-                <Link to={`/products/₹{item.id}`} className="btn btn-outline-dark">
+                <Link to={`/products/${item.id}`} className="btn btn-outline-dark">
                   Buy Now
                 </Link>
               </div>
